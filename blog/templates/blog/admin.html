@@ -9,11 +9,13 @@
     <br>
     <br>
     <p>問題の編集にはログインが必要です</p>
+    <br>
     <hr>
-    
+
+
     {% for post in posts %}
     <br>
-    <h1>{{ post.title }}</h1>
+    <h2 id="question">{{ post.title }}</h2>
     <br>
 
     {% if post.author != name %}
@@ -28,7 +30,7 @@
     {% endif %}
     <br>
     <hr>
-    
+
 
     {% endfor %}
 

@@ -8,36 +8,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static "css/skin.css" %}">
-
-
-
-
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/skin.css" %}"> -->
 
     <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="static/img/favicon.png" rel="icon">
+    <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
         rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="lib/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
 
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- <link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" type="text/css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" type="text/css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" type="text/css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" type="text/css" rel="stylesheet"> -->
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" type="text/css" rel="stylesheet"> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -50,6 +48,10 @@
         crossorigin="anonymous"></script>
 
     <style>
+        .qr {
+            width: 150px
+        }
+
         header {
             background-color: #007bff;
             display: flex;
@@ -64,7 +66,7 @@
         #intro {
             width: 100%;
             position: relative;
-            background: url("../img/intro-bg.png") center bottom no-repeat;
+            background: url("static/img/intro-bg.png") center bottom no-repeat;
             background-size: cover;
             padding: 200px 0 120px 0;
         }
@@ -151,12 +153,11 @@
                 <div class="row">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="{% url 'blog-home' %}">
-                            <h1>E-ラーニング教材</h1>
+                            <!-- <h1>E-ラーニング教材</h1> -->
                         </a>
                     </div>
                     <div class="col-sm">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <a class="navbar-brand" href="#">Navi</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -204,15 +205,16 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <form action="{% url 'post-admin' %}">
-                            <button type="submit" class="btn btn-primary">管理者ページへ</button>
-                        </form>
+                        <hr />
+                        <ul class="footer-links">
+                            <a href="{% url 'post-admin' %}">管理者ページへ</a></li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <h4>Useful Links</h4>
+
                         <hr />
                         <ul class="footer-links">
                             <li><a href="{% url 'signup' %}">Sign Up</a></li>

@@ -3,39 +3,47 @@
 
 
 <body>
-
     {% block body %}
+    <br>
+    <br>
+    <h1><span><strong>マニュアル翻訳ページ</strong></span>
+    </h1>
+    <hr>
+    <br>
+    <h4><span>pdf形式のマニュアルをアップロードしてください</span>
+    </h4>
+    <br>
 
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
     <br>
     <br>
     <br>
     <br>
-    <h3>店長様向け教材</h3>
     <br>
-    <hr>
-    <br>
-    <br>
-    <p>外国人労働者との接し方</p>
-    <br>
-    <p>指導方法についてのマニュアル</p>
-    <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <br>
+
 
     <section id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <ul class="footer-links">
-                            <a href="{% url 'post-admin' %}">管理者ページへ</a></li>
-                        </ul>
+                        <form action="{% url 'post-admin' %}">
+                            <button type="submit" class="btn btn-primary">管理者ページへ</button>
+                        </form>
                     </div>
                 </div>
 
+                <div class="col-md-3 col-sm-3 col-xs-12 block">
+                    <div class="footer-block">
+                        <form action="{% url 'blog-home' %}">
+                            <button type="submit" class="btn btn-primary">HOMEへ</button>
+                        </form>
+                    </div>
+                </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
@@ -50,11 +58,7 @@
         </div>
         </div>
         </div>
-        <br>
-        <br>
-        <hr>
     </section>
-
 
     {% endblock body %}
 

@@ -8,43 +8,74 @@
     <br>
     <h2><span><strong>Home</strong></span>
     </h2>
-    <hr>
-    <br>
-    <br>
 
-<!--ここから-->
+
+    <!--ここから-->
     <section id="intro" class="clearfix">
         <div class="container">
-    
-          <div class="intro-img">
-            <img src="img/intro-img.svg" alt="" class="img-fluid">
-          </div>
-    
-          <div class="intro-info">
-            <h2>We provide<br><span>solutions</span><br>for your business!</h2>
-            <div>
-    <br>
-              <a href="{% url 'blog-parttimer' %}" class="btn-get-started scrollto">アルバイト様向けページ</a>
-              <a href="{% url 'blog-manager' %}" class="btn-services scrollto">店長様向けページ</a>
+
+            <div class="intro-img">
+                <img src="static/img/intro-img.svg" alt="" class="img-fluid">
             </div>
-          </div>
-          
+
+            <div class="intro-info">
+                <h2><br>E-learning　System<br>for Foreigner
+                </h2>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{% url 'blog-parttimer' %}" class="btn-get-started scrollto">アルバイト様向けページ</a>
+                    <a href="{% url 'blog-manager' %}" class="btn-services scrollto">店長様向けページ</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="{% url 'upload' %}" class="btn-services scrollto">マニュアル翻訳ページ</a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="btn-services scrollto">LINEチャットボット→</div>
+                    <img src="static/img/888uiyfo.png" alt="" class="qr">
+                </div>
+            </div>
         </div>
-      </section><!-- #intro -->
+    </section><!-- #intro -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
-   <section id="footer">
+
+    <section id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
-                        <form action="{% url 'post-admin' %}">
-                            <button type="submit" class="btn btn-primary">管理者ページへ</button>
-                        </form>
+                        <hr />
+                        <ul class="footer-links">
+                            <a href="{% url 'post-admin' %}">管理者ページへ</a></li>
+                        </ul>
                     </div>
                 </div>
-               
-                
+
+
 
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
