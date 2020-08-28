@@ -20,23 +20,12 @@
     <br>
     <h2 id="question">{{ post.title }}</h2>
     <br>
-    <section id="result1">
-        <form action="{% url 'post-detail' post.id %}">
-            <option value="正解">○</option>
-            <option value="不正解">×</option>
-            <option value="正解">どちらでもない</option>
-            </select>
-            <input type="submit" name="submit" value="送信" />
-            <br>
-            <h2></h2>
-        </form>
-    </section>
-
-    <br>
-    <br>
-
     <form action="{% url 'post-detail' post.id %}">
-        <button type="submit" class="btn btn-primary">解説を見る</button>
+        <input type="submit" class="btn btn-primary" name="True" value="○" />
+        <input type="submit" class="btn btn-primary" name="False" value="×" />
+        <input type="submit" class="btn btn-primary" name="None" value="どちらでもない" />
+        <br>
+        <br>
     </form>
     <br>
     <hr>
@@ -45,42 +34,30 @@
     <br>
     <br>
 
-    <section id="result2">
-        <h2></h2>
+    <section id="result">
         <br>
         <br>
         <form action="{% url 'blog-parttimer' %}">
-            <button type="submit" class="btn btn-primary">再回答する</button>
+            <button type="submit" class="btn btn-primary">再回答する</button>       
         </form>
+        <br>
+
+        <button type="submit" class="btn btn-primary" id="btn2">スコア確認</button>
+        <br>
+        <h2></h2>
     </section>
     <br>
     <br>
     <br>
 
     <script>
-        // const question = document.querySelector('#question');
-        // const choices = document.querySelector('#choices');
         const btn = document.querySelector('#btn2');
-        const result1 = document.querySelector('#result1 > h2');
-        const result2 = document.querySelector('#result2 > h2');
+        const result = document.querySelector('#result > h2');
 
-        // let currentNum = 0;
-        // let isAnswered;
         let score = 0;
 
         btn.addEventListener('click', () => {
-            btn.classList.add('disabled');
-            console.log(button.value);
-            console.log(button.textContent);
-            if (btn.value == "True") {
-                result1.textContent = '正解';
-                score += 1;
-            }
-            else {
-                result1.textContent = '不正解';
-            }
-
-            result2.textContent = `Score: ${score} / 3`;
+            result.textContent = `Score: 3 / 3`;
         });
 
     </script>

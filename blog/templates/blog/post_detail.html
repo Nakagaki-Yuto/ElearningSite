@@ -3,25 +3,23 @@
 
 <br>
 <br>
+<br>
 <center>
-    <h2>{{ object.title }}
-
-    </h2>
+    <u>
+        <h2>正解</h2>
+    </u>
     <br>
     <br>
     <ul class="aboutul">
-        <u>
-            <li>
-                {% if object.answer %}
-                <h2>答え：○</h2>
-                {% elif object.answer == Null %}
-                <h2>答え：どちらでもない</h2>
-                {% else %}
-                <h2>答え：×</h2>
-                {% endif %}
-            </li>
-        </u>
-        <br>
+        <li>
+            {% if object.answer %}
+            <h2>答え：○</h2>
+            {% elif object.answer == Null %}
+            <h2>答え：どちらでもない</h2>
+            {% else %}
+            <h2>答え：×</h2>
+            {% endif %}
+        </li>
         <li>
             <h3>{{ object.content }}</h3>
         </li>
