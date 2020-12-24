@@ -1,4 +1,4 @@
-# ElearningSite
+# Elearning_site
 
 「外国人アルバイト向けのe-ラーニング教材」
 
